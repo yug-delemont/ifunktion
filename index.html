@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFunktion</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/css/owl.carousel.min.css"
+    />
+
+    <!-- <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap");
+
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Poppins";
+      }
+      .wrapper {
+        overflow-x: hidden;
+        position: relative;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      svg {
+        position: absolute;
+        top: 12em;
+        left: 10vw;
+        width: 50vw;
+
+        .mask {
+          width: 0;
+        }
+      }
+
+      .container {
+        display: flex;
+        width: 300vw;
+
+        .col {
+          display: flex;
+          gap: 3em;
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+
+        section {
+          width: 100vw;
+          padding: 20vw 10vw;
+
+          h1 {
+            font-size: 3rem;
+            margin: 0;
+          }
+
+          p {
+            font-size: 1.2rem;
+            width: 50vw;
+          }
+
+          ul {
+            list-style-type: none;
+            display: flex;
+            gap: 3em;
+            width: 100%;
+            height: 300px;
+            padding: 0;
+
+            li {
+              background: white;
+              border-radius: 0.3em;
+              flex-grow: 1;
+            }
+          }
+        }
+      }
+
+      section {
+        height: 100vh;
+      }
+    </style> -->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container container-wrapper">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./assets/images/hlogo.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <div
+                class="plate plate4"
+                onclick="this.classList.toggle('active')"
+              >
+                <svg
+                  class="burger"
+                  version="1.1"
+                  height="100"
+                  width="100"
+                  viewBox="0 0 100 100"
+                >
+                  <path class="line line1" d="M 50,35 H 30" />
+                  <path class="line line2" d="M 50,35 H 70" />
+                  <path class="line line3" d="M 50,50 H 30" />
+                  <path class="line line4" d="M 50,50 H 70" />
+                  <path class="line line5" d="M 50,65 H 30" />
+                  <path class="line line6" d="M 50,65 H 70" />
+                </svg>
+                <svg
+                  class="x"
+                  version="1.1"
+                  height="100"
+                  width="100"
+                  viewBox="0 0 100 100"
+                >
+                  <path class="line" d="M 34,32 L 66,68" />
+                  <path class="line" d="M 66,32 L 34,68" />
+                </svg>
+              </div>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pro Sport</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Bcaa Max</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </ul>
+
+            <div class="btns">
+              <a href="#">
+                <img src="./assets/images/cart.svg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="heresecrion">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div>
+            <h1 class="energy-h1">
+              Own your <span class="energy-span">Energy!</span>
+            </h1>
+            <p class="dhs">Dhs 150.00</p>
+            <p class="dhs-para">
+              Funktion Active Energy is designed for athletes, professionals,
+              high achievers, and anyone seeking to maximize their productivity.
+              It offers a natural, crash-free energy boost. Its unique blend of
+              ginseng, rosehip, and green tea extracts ensures sustained energy.
+            </p>
+            <a href="#" class="green-btn">
+              <span>Add to cart</span>
+              <span>
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.5098 3C14.7662 4.81818 17.1251 9.14545 24.5098 11.9091C21.1764 12.9394 14.5098 16.2 14.5098 21"
+                    stroke="black"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M3.5 11.25C3.08579 11.25 2.75 11.5858 2.75 12C2.75 12.4142 3.08579 12.75 3.5 12.75V11.25ZM3.5 12.75H22.5103V11.25H3.5V12.75Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <div class="home-product-main">
+            <img
+              class="home-product-img"
+              src="./assets/images/pro-sport-energy-gel.png"
+              alt=""
+            />
+            <svg
+              width="178"
+              height="4"
+              viewBox="0 0 178 4"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="178" height="4" rx="2" fill="white" />
+              <rect width="57" height="4" rx="2" fill="#BFD900" />
+            </svg>
+          </div>
+          <div class="card-info-main">
+            <div class="card-info-vector">
+              <div class="card-info card-info1">
+                <div>
+                  <span>
+                    <img src="./assets/images/lighting-1.png" alt="" />
+                  </span>
+                  <p class="card-info-para">All Day Energy</p>
+                </div>
+                <div>
+                  <span>
+                    <img src="./assets/images/time-management-1.png" alt="" />
+                  </span>
+                  <p class="card-info-para">Maximum Productivity</p>
+                </div>
+              </div>
+              <span class="vector-green">
+                <img src="./assets/images/Vector-green.svg" alt="" />
+              </span>
+            </div>
+            <div class="card-info-vector card-info-vector-black">
+              <div class="card-info card-info2">
+                <div>
+                  <span>
+                    <img src="./assets/images/mental_focus.svg" alt="" />
+                  </span>
+                  <p class="card-info-para">Mental Clarity</p>
+                </div>
+                <div>
+                  <span>
+                    <img src="./assets/images/Stamina.png" alt="" />
+                  </span>
+                  <p class="card-info-para">Boost Immunity</p>
+                </div>
+              </div>
+              <span class="vector-green">
+                <img src="./assets/images/Vector-black.svg" alt="" />
+              </span>
+            </div>
+            <div class="card-info card-info3">
+              <div>
+                <span>
+                  <img src="./assets/images/no-focus1.svg" alt="" />
+                </span>
+                <p class="card-info-para">Enhanced Concentration</p>
+              </div>
+              <div>
+                <span>
+                  <img src="./assets/images/no-sugar1.svg" alt="" />
+                </span>
+                <p class="card-info-para">No Sugar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="may-like">
+      <div class="container">
+        <div class="may-like-wrapper">
+          <h2 class="may-like-head">
+            <span class="you-may">You may</span> also Like
+          </h2>
+          <div class="may-like-pro">
+            <div class="may-like-pro-inner active">
+              <svg
+                class="may-like-pro-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="295"
+                height="121"
+                viewBox="0 0 295 121"
+                fill="none"
+              >
+                <path
+                  d="M0 30C0 13.4315 13.4315 0 30 0H264.634C283.156 0 297.253 16.6183 294.233 34.8923L284.15 95.8923C281.756 110.376 269.232 121 254.552 121H30C13.4315 121 0 107.569 0 91V30Z"
+                  fill="white"
+                />
+              </svg>
+              <!-- <div class="may-like-pro-ma"> -->
+              <img
+                class="may-like-pro-img"
+                src="./assets/images/like1.png"
+                alt=""
+              />
+              <div>
+                <p class="funktion-may-like-para">Funktion Pro Sport</p>
+                <div class="green-rate">
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                </div>
+                <p class="price">450.00 DR</p>
+                <p class="may-like-des">3 Star With Funktion</p>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="may-like-pro-inner">
+              <svg
+                class="may-like-pro-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="295"
+                height="121"
+                viewBox="0 0 295 121"
+                fill="none"
+              >
+                <path
+                  d="M0 30C0 13.4315 13.4315 0 30 0H264.634C283.156 0 297.253 16.6183 294.233 34.8923L284.15 95.8923C281.756 110.376 269.232 121 254.552 121H30C13.4315 121 0 107.569 0 91V30Z"
+                  fill="white"
+                />
+              </svg>
+              <!-- <div class="may-like-pro-ma"> -->
+              <img
+                class="may-like-pro-img"
+                src="./assets/images/like2.png"
+                alt=""
+              />
+              <div>
+                <p class="funktion-may-like-para">Funktion Active Energy</p>
+                <div class="green-rate">
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                </div>
+                <p class="price">450.00 DR</p>
+                <p class="may-like-des">3 Star With Funktion</p>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="may-like-pro-inner">
+              <svg
+                class="may-like-pro-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="295"
+                height="121"
+                viewBox="0 0 295 121"
+                fill="none"
+              >
+                <path
+                  d="M0 30C0 13.4315 13.4315 0 30 0H264.634C283.156 0 297.253 16.6183 294.233 34.8923L284.15 95.8923C281.756 110.376 269.232 121 254.552 121H30C13.4315 121 0 107.569 0 91V30Z"
+                  fill="white"
+                />
+              </svg>
+              <!-- <div class="may-like-pro-ma"> -->
+              <img
+                class="may-like-pro-img"
+                src="./assets/images/like3.png"
+                alt=""
+              />
+              <div>
+                <p class="funktion-may-like-para">Funktion BCAA Max</p>
+                <div class="green-rate">
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                  <img src="./assets/images/green-star.svg" alt="" />
+                </div>
+                <p class="price">450.00 DR</p>
+                <p class="may-like-des">3 Star With Funktion</p>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="convenient-sec">
+      <div class="container">
+        <div class="convenient-title">
+          <h1 class="title">
+            Convenient <span class="title-span"> for you </span>
+          </h1>
+          <p class="title-dec">
+            Made with Natural Ingredients, Backed by Science
+          </p>
+        </div>
+        <div id="convenient" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="card collapsed">
+              <div class="card-bg"></div>
+              <div class="convenient-card">
+                <img
+                  src="./assets/images/convenient1.png"
+                  alt=""
+                  class="convenient-img"
+                />
+                <div class="convenient-details">
+                  <h5 class="convenient-head">Pro Sport Blackcurrant</h5>
+                  <p class="convenient-para">Dhs.150.00</p>
+                  <a href="#" class="convenient-link">
+                    <span>Buy Now</span>
+                    <span>
+                      <img src="./assets/images/arrow-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card collapsed">
+              <div class="card-bg"></div>
+              <div class="convenient-card">
+                <img
+                  src="./assets/images/convenient2.png"
+                  alt=""
+                  class="convenient-img"
+                />
+                <div class="convenient-details">
+                  <h5 class="convenient-head">Pro Sport Blackcurrant</h5>
+                  <p class="convenient-para">Dhs.150.00</p>
+                  <a href="#" class="convenient-link">
+                    <span>Buy Now</span>
+                    <span>
+                      <img src="./assets/images/arrow-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card collapsed">
+              <div class="card-bg"></div>
+              <div class="convenient-card">
+                <img
+                  src="./assets/images/convenient3.png"
+                  alt=""
+                  class="convenient-img"
+                />
+                <div class="convenient-details">
+                  <h5 class="convenient-head">Pro Sport Blackcurrant</h5>
+                  <p class="convenient-para">Dhs.150.00</p>
+                  <a href="#" class="convenient-link">
+                    <span>Buy Now</span>
+                    <span>
+                      <img src="./assets/images/arrow-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="convenient-title">
+          <h1 class="title">
+            Our <span class="title-span">Testimonials</span>
+          </h1>
+          <p class="title-dec">
+            Made with Natural Ingredients, Backed by Science
+          </p>
+        </div>
+        <div id="testimonials" class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="testimonials-card">
+              <img
+                src="./assets/images/testimonials1.png"
+                alt=""
+                class="testimonials-img"
+              />
+              <div class="testimonials-inner">
+                <h6 class="testimonials-head">Bessie Cooper</h6>
+                <div class="testimonials-star">
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                </div>
+                <p class="testimonials-para">
+                  Possit lucilius quaestio in sea, sententiae reprimique
+                  intellegam no usu. Ex munere intellegebat eam ex quidam
+                  labores interpretaris nec, eum eu labore expetenda suavitate
+                  vix dicta soleat concludaturque an.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimonials-card">
+              <img
+                src="./assets/images/testimonials2.png"
+                alt=""
+                class="testimonials-img"
+              />
+              <div class="testimonials-inner">
+                <h6 class="testimonials-head">Bessie Cooper</h6>
+                <div class="testimonials-star">
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                </div>
+                <p class="testimonials-para">
+                  Possit lucilius quaestio in sea, sententiae reprimique
+                  intellegam no usu. Ex munere intellegebat eam ex quidam
+                  labores interpretaris nec, eum eu labore expetenda suavitate
+                  vix dicta soleat concludaturque an.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimonials-card">
+              <img
+                src="./assets/images/testimonials3.png"
+                alt=""
+                class="testimonials-img"
+              />
+              <div class="testimonials-inner">
+                <h6 class="testimonials-head">Bessie Cooper</h6>
+                <div class="testimonials-star">
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                </div>
+                <p class="testimonials-para">
+                  Possit lucilius quaestio in sea, sententiae reprimique
+                  intellegam no usu. Ex munere intellegebat eam ex quidam
+                  labores interpretaris nec, eum eu labore expetenda suavitate
+                  vix dicta soleat concludaturque an.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="testimonials-card">
+              <img
+                src="./assets/images/testimonials3.png"
+                alt=""
+                class="testimonials-img"
+              />
+              <div class="testimonials-inner">
+                <h6 class="testimonials-head">Bessie Cooper</h6>
+                <div class="testimonials-star">
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                  <img src="./assets/images/rating-star.svg" alt="" />
+                </div>
+                <p class="testimonials-para">
+                  Possit lucilius quaestio in sea, sententiae reprimique
+                  intellegam no usu. Ex munere intellegebat eam ex quidam
+                  labores interpretaris nec, eum eu labore expetenda suavitate
+                  vix dicta soleat concludaturque an.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-main">
+          <div>
+            <a href="#">
+              <img src="./assets/images/flogo.png" alt="" />
+            </a>
+            <p class="footer-des">
+              It is a long established fact that a reader will be distracted
+              by the readable content of a page when looking at its layout.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-link-inner">
+              <a href="./index.html" class="footer-a">Home</a>
+              <a href="" class="footer-a">About Us</a>
+              <a href="" class="footer-a">Contact Us</a>
+            </div>
+            <div class="footer-link-inner">
+              <a href="#" class="footer-a">Convenient for you</a>
+              <a href="#" class="footer-a">Testimonials</a>
+            </div>
+            <div class="footer-link-inner">
+              <a href="#" class="footer-a">Help</a>
+              <a href="#" class="footer-a">Privacy Policy</a>
+              <a href="#" class="footer-a">Terms of Service</a>
+              <a href="#" class="footer-a">Refund policy</a>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#"
+              ><svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="42" height="42" rx="21" fill="white" />
+                <path
+                  d="M21.4924 9.77168C22.7202 9.75293 23.9389 9.76268 25.1569 9.75293C25.1932 11.2162 25.7793 12.6122 26.7987 13.6627L26.7972 13.6612C27.8903 14.6464 29.2823 15.2367 30.7504 15.3374L30.7714 15.3389V19.1159C29.3883 19.0842 28.0268 18.7658 26.7732 18.1807L26.8347 18.2062C26.2929 17.9481 25.772 17.6482 25.2769 17.3092L25.3159 17.3347C25.3069 20.0714 25.3249 22.8082 25.2972 25.5352C25.2266 26.8691 24.7831 28.1564 24.0169 29.2507L24.0319 29.2274C22.7929 31.0019 20.7859 32.1667 18.5037 32.2357H18.4932C17.1392 32.2994 15.7971 31.9573 14.6389 31.2532L14.6689 31.2704C12.7879 30.1387 11.4904 28.2022 11.2504 25.9499L11.2474 25.9192C11.2257 25.454 11.2227 24.9881 11.2384 24.5227C11.6059 20.9384 14.6089 18.1657 18.2592 18.1657C18.6694 18.1657 19.0714 18.2009 19.4622 18.2677L19.4202 18.2617C19.4389 19.6484 19.3827 21.0359 19.3827 22.4227C18.5786 22.1406 17.6955 22.189 16.9271 22.5573C16.1587 22.9255 15.5678 23.5835 15.2839 24.3869L15.2772 24.4094C15.1774 24.7297 15.1197 25.0979 15.1197 25.4789C15.1197 25.6334 15.1294 25.7864 15.1474 25.9364L15.1459 25.9184C15.2691 26.6915 15.6718 27.3924 16.2777 27.8882C16.8835 28.384 17.6502 28.6401 18.4324 28.6079H18.4257C18.9472 28.5926 19.4568 28.448 19.9086 28.1869C20.3604 27.9259 20.7402 27.5567 21.0139 27.1124L21.0214 27.0989C21.2217 26.8199 21.3589 26.4824 21.4047 26.1157L21.4054 26.1052C21.4992 24.4274 21.4617 22.7594 21.4707 21.0817C21.4797 17.3047 21.4617 13.5367 21.4894 9.76943L21.4924 9.77168Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="42" height="42" rx="21" fill="white" />
+                <path
+                  d="M15.0139 17.0064C15.1279 16.1024 16.3029 14.8744 17.2339 15.0104C18.1409 15.1824 18.8589 16.7444 19.2639 17.4464C19.5499 17.9554 19.3639 18.4714 19.0969 18.6894C18.7359 18.9794 18.1709 19.3814 18.2889 19.7844C18.4999 20.5004 20.9999 23.0004 22.2299 23.7114C22.6959 23.9804 23.0339 23.2714 23.3219 22.9074C23.5319 22.6274 24.0479 22.4604 24.5559 22.7364C25.3149 23.1784 26.0299 23.6924 26.6909 24.2704C27.0209 24.5464 27.0989 24.9544 26.8699 25.3854C26.4669 26.1454 25.3009 27.1454 24.4549 26.9424C22.9759 26.5874 16.9999 24.2704 15.0799 17.5584C14.9719 17.2404 14.9999 17.1204 15.0139 17.0064Z"
+                  fill="black"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21 32C19.776 32 19.1 31.869 18 31.5L15.894 32.553C15.589 32.7054 15.2501 32.7773 14.9095 32.7619C14.5689 32.7465 14.2379 32.6442 13.9479 32.4649C13.658 32.2855 13.4187 32.035 13.2528 31.7371C13.0868 31.4393 12.9998 31.104 13 30.763V28.5C10.847 26.492 10 24.177 10 21C10 14.925 14.925 10 21 10C27.075 10 32 14.925 32 21C32 27.075 27.075 32 21 32ZM15 27.63L14.364 27.037C12.691 25.477 12 23.733 12 21C12 19.22 12.5278 17.4799 13.5168 15.9999C14.5057 14.5198 15.9113 13.3663 17.5558 12.6851C19.2004 12.0039 21.01 11.8257 22.7558 12.1729C24.5016 12.5202 26.1053 13.3774 27.364 14.636C28.6226 15.8947 29.4798 17.4984 29.8271 19.2442C30.1743 20.99 29.9961 22.7996 29.3149 24.4442C28.6337 26.0887 27.4802 27.4943 26.0001 28.4832C24.5201 29.4722 22.78 30 21 30C20.014 30 19.552 29.911 18.636 29.604L17.848 29.34L15 30.764V27.63Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="42" height="42" rx="21" fill="white" />
+                <path
+                  d="M25.9617 11.0752H16.0374C13.2586 11.0752 11.0752 13.2586 11.0752 16.0374V25.9618C11.0752 28.7406 13.2586 30.924 16.0374 30.924H25.9617C28.7406 30.924 30.9239 28.7406 30.9239 25.9618V16.0374C30.9239 13.2586 28.7406 11.0752 25.9617 11.0752ZM28.9391 25.9618C28.9391 27.6489 27.6489 28.9391 25.9617 28.9391H16.0374C14.3502 28.9391 13.0601 27.6489 13.0601 25.9618V16.0374C13.0601 14.3502 14.3502 13.0601 16.0374 13.0601H25.9617C27.6489 13.0601 28.9391 14.3502 28.9391 16.0374V25.9618Z"
+                  fill="black"
+                />
+                <path
+                  d="M21.0002 16.0381C18.2214 16.0381 16.0381 18.2214 16.0381 21.0003C16.0381 23.7791 18.2214 25.9625 21.0002 25.9625C23.7791 25.9625 25.9624 23.7791 25.9624 21.0003C25.9624 18.2214 23.7791 16.0381 21.0002 16.0381ZM21.0002 23.9776C19.3131 23.9776 18.023 22.6874 18.023 21.0003C18.023 19.3132 19.3131 18.023 21.0002 18.023C22.6874 18.023 23.9775 19.3132 23.9775 21.0003C23.9775 22.6874 22.6874 23.9776 21.0002 23.9776Z"
+                  fill="black"
+                />
+                <path
+                  d="M25.9622 17.0298C26.5103 17.0298 26.9546 16.5855 26.9546 16.0374C26.9546 15.4893 26.5103 15.0449 25.9622 15.0449C25.4141 15.0449 24.9697 15.4893 24.9697 16.0374C24.9697 16.5855 25.4141 17.0298 25.9622 17.0298Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+            <a href="#"
+              ><svg
+                width="42"
+                height="42"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="42" height="42" rx="21" fill="white" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21 26.9688L9 16.3788V30H33V16.3788L21 26.9688ZM21.0012 23.7744L9 13.1772V12H33V13.1772L21.0012 23.7744Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="copyright-para">
+            Copyright ©2024 <span style="font-weight: 700;">Funktion</span> All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>
