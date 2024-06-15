@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Product Sans';
+    src: url('ProductSans-Regular.woff2') format('woff2'),
+        url('ProductSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('FranklinGothicITALIC.woff2') format('woff2'),
+        url('FranklinGothicITALIC.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('FranklinGothicITALIC.woff2') format('woff2'),
+        url('FranklinGothicITALIC.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('FranklinGothicCondensed.woff2') format('woff2'),
+        url('FranklinGothicCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('FranklinGothic.woff2') format('woff2'),
+        url('FranklinGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franklin Gothic Heavy';
+    src: url('FranklinGothicCondensed.woff2') format('woff2'),
+        url('FranklinGothicCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
