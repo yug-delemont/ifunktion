@@ -60,6 +60,16 @@ document
     document.querySelector("html").classList.toggle("show-menu");
   });
 
+//   document.querySelector("#des-minus").addEventListener("click", function() {
+//     var htmlElement = document.querySelector("#des-para");
+//     if (htmlElement.style.visibility === "hidden") {
+//         htmlElement.style.visibility = "visible";
+//     } else {
+//         htmlElement.style.visibility = "hidden";
+//     }
+// });
+
+
 $(document).ready(function () {
   $("#convenient").owlCarousel({
     loop: true,
@@ -83,6 +93,29 @@ $(document).ready(function () {
   });
 
   $("#testimonials").owlCarousel({
+    loop: true,
+    margin: 32,
+    nav: true,
+    dots: true,
+    navText: [
+      "<img src='./assets/images/slider-left-arrow.svg'>",
+      "<img src='./assets/images/slider-right-arrow.svg'>",
+    ],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
+  });
+
+  $("#pro-sport-slider").owlCarousel({
     loop: true,
     margin: 32,
     nav: true,
