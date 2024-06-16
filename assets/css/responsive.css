@@ -10,20 +10,98 @@
     }
 }
 
+@media only screen and (max-width: 1760px) {
+    .owl-nav {
+        width: auto;
+        gap: 2rem;
+        bottom: -3rem;
+        top: auto;
+    }
+    
+    button.owl-next, button.owl-prev {
+        width: 45px;
+    }
+}
+
 @media only screen and (min-width: 1800px) {
     .custom-container {
         max-width: 1630px;
     }
 }
 
+@media only screen and (max-width: 1599px) {
+    body .custom-container {
+        margin: 0 2rem;
+        max-width: -webkit-fill-available;
+    }
+}
 
-@media only screen and (max-width: 1599px) {}
+@media only screen and (max-width: 1429px) {
+    .card .card-bg {
+        inset: 9rem 0 0.1rem 0;
+    }
+}
 
-@media only screen and (max-width: 1429px) {}
+@media only screen and (max-width: 1292px) {
+.may-like-wrapper {
+    flex-direction: column;
+}
+
+.you-may::after {
+    display: none;
+}
+
+h2.may-like-head {
+    max-width: max-content;
+}
+}
 
 @media only screen and (max-width: 1199px) {}
 
 @media only screen and (max-width: 991px) {
+    .convenient-title {
+        padding-bottom: 1.81rem;
+    }
+    footer {
+        padding-left: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+    }
+    h1.title {
+        font-size: 2.25rem;
+        line-height: normal;
+    }
+    
+    p.title-dec {
+        font-size: 0.875rem;
+        line-height: normal;
+    }
+    
+    h5.convenient-head {
+    }
+    
+    p.convenient-para {
+        font-size: 1.125rem;
+    }
+    
+    a.convenient-link {
+        font-size: 0.875rem;
+    }
+    
+    .card .convenient-card {
+        gap: 1.19rem;
+        padding: 2.13rem;
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+    }
+    .show-menu #navbarNav ul.navbar-nav {
+    flex-direction: column;
+}
+
+div#navbarNav {
+    height: 100vh !important;
+}
 
     ul.footermenu {
         max-width: 370px;
@@ -145,6 +223,7 @@
         -ms-transform: translateX(0%);
         -o-transform: translateX(0%);
         transform: translateX(0%);
+        /* height: 100vh !important; */
     }
 
     .show-menu .navbar-toggler {
@@ -319,9 +398,6 @@
     /**********  Responsive Menu  **********/
 
 }
-
-
-
 
 @media only screen and (max-width: 767px) {}
 

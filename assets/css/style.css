@@ -776,10 +776,13 @@ footer {
   display: flex;
   justify-content: space-between;
   padding-top: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 .footer-links {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .footer-link-inner {
   display: flex;
@@ -1148,20 +1151,12 @@ a.bulk_product:hover {
   width: 100%;
   transition: all 0.5s ease;
 }
-.img-showcase img{
+/* .img-showcase img{
   min-width: 100%;
-}
+} */
 .img-select{
   display: flex;
 }
-/* .img-item{
-  margin: 0.3rem;
-} */
-/* .img-item:nth-child(1),
-.img-item:nth-child(2),
-.img-item:nth-child(3){
-  margin-right: 0;
-}
 .img-item:hover{
   opacity: 0.8;
-} */
+} 
