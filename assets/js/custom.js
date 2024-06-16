@@ -13,7 +13,7 @@ let scrollTween = gsap.to(sections, {
     pin: true,
     scrub: 1,
     end: "+=3000",
-    snap: 1 / (sections.length - 1),
+    // snap: 1 / (sections.length - 1),
     markers: false,
   },
 });
@@ -142,9 +142,9 @@ imgBtns.forEach((imgItem, index) => {
 });
 
 function slideImage() {
-  const displayWidth = document.querySelector(
-    ".img-showcase img:first-child"
-  ).clientWidth;
+  // const displayWidth = document.querySelector(
+  //   ".img-showcase img:first-child"
+  // ).clientWidth;
 
   // Remove active class from all images
   document.querySelectorAll(".img-showcase img").forEach((img) => {
@@ -172,10 +172,12 @@ $(document).ready(function () {
     loop: true,
     margin: 32,
     nav: true,
+    dots:false,
     navText: [
       "<img src='./assets/images/slider-left-arrow.svg'>",
       "<img src='./assets/images/slider-right-arrow.svg'>",
     ],
+    responsiveClass: true,
     responsive: {
       0: {
         items: 1,
@@ -202,13 +204,22 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
+        dots: false
+
       },
       800: {
         items: 2,
+        dots: false
+
       },
       1118: {
         items: 3,
+        dots: false
+
       },
+      1760:{
+        dots: false
+      }
     },
   });
 
@@ -216,7 +227,7 @@ $(document).ready(function () {
     loop: true,
     margin: 32,
     nav: true,
-    dots: true,
+    dots: false,
     navText: [
       "<img src='./assets/images/slider-left-arrow.svg'>",
       "<img src='./assets/images/slider-right-arrow.svg'>",
@@ -225,13 +236,22 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
+        dots: false
+
       },
       800: {
         items: 2,
+        dots: false
+
       },
       1118: {
         items: 3,
+        dots: false
+
       },
+      1760:{
+        dots: false
+      }
     },
   });
 });
