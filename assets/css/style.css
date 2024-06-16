@@ -385,7 +385,7 @@ header.fixed .navbar {
 }
 svg.scroll-process {
   position: absolute;
-  bottom: 11vw;
+  bottom: 15.6vw;
   left: 24vw;
   width: 50vw;
 }
@@ -551,7 +551,7 @@ p.card-info-para {
   align-items: center;
   position: relative;
   gap: 1.25rem;
-  width: 100%;
+  /* width: 100%; */
 }
 h2.may-like-head {
   color: #000;
@@ -1184,7 +1184,7 @@ a.bulk_product:hover {
 /* may like */
 .may-like {
   position: absolute;
-  bottom: -1vw;
+  bottom: 4.7vw;
   left: 0;
   width: 100vw;
 }.may-like-pro-inner.active > div > p {
@@ -1199,4 +1199,18 @@ img.may-like-pro-img {
   border-radius: 0 0 0 11px;
 }.wrapper::-webkit-scrollbar {
   display: none;
+}
+img.home-product-img.anim {
+  aspect-ratio: 0.9 / 1;
+  object-fit: contain;
+}.discription > div > h3 {
+  color: var(--Gray-9, #212529);
+  font-family: "Product Sans Medium";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 133.333% */
+  letter-spacing: -0.03rem;
+}.may-like-pro-inner.active img.may-like-pro-img {
+    transform: rotate(-8deg);
 }

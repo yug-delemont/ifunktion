@@ -13,6 +13,7 @@ let scrollTween = gsap.to(sections, {
     pin: true,
     scrub: 1,
     end: "+=3000",
+    snap: 1 / (sections.length - 1),
     markers: false,
   },
 });
@@ -48,32 +49,35 @@ sections.forEach((section, index) => {
   });
 
   // Add active class to corresponding .may-like-pro-inner
-  gsap.to({}, {
-    scrollTrigger: {
-      trigger: section,
-      containerAnimation: scrollTween,
-      start: "left center",
-      end: "right center",
-      onEnter: () => {
-        mayLikeProInners.forEach((div, i) => {
-          if (i === index) {
-            div.classList.add("active");
-          } else {
-            div.classList.remove("active");
-          }
-        });
+  gsap.to(
+    {},
+    {
+      scrollTrigger: {
+        trigger: section,
+        containerAnimation: scrollTween,
+        start: "left center",
+        end: "right center",
+        onEnter: () => {
+          mayLikeProInners.forEach((div, i) => {
+            if (i === index) {
+              div.classList.add("active");
+            } else {
+              div.classList.remove("active");
+            }
+          });
+        },
+        onLeaveBack: () => {
+          mayLikeProInners.forEach((div, i) => {
+            if (i === index - 1) {
+              div.classList.add("active");
+            } else {
+              div.classList.remove("active");
+            }
+          });
+        },
       },
-      onLeaveBack: () => {
-        mayLikeProInners.forEach((div, i) => {
-          if (i === index - 1) {
-            div.classList.add("active");
-          } else {
-            div.classList.remove("active");
-          }
-        });
-      },
-    },
-  });
+    }
+  );
 });
 
 // Initialize active class on page load based on scroll position
@@ -99,26 +103,30 @@ function setActiveClassOnLoad() {
   });
 }
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   setActiveClassOnLoad();
   ScrollTrigger.refresh();
 });
 
-// Hamburger menu
-document
-  .querySelector(".navbar-toggler")
-  .addEventListener("click", function () {
-    document.querySelector("html").classList.toggle("show-menu");
-  });
 
-//   document.querySelector("#des-minus").addEventListener("click", function() {
-//     var htmlElement = document.querySelector("#des-para");
-//     if (htmlElement.style.visibility === "hidden") {
-//         htmlElement.style.visibility = "visible";
-//     } else {
-//         htmlElement.style.visibility = "hidden";
-//     }
-// });
+document.addEventListener("DOMContentLoaded", (event) => {
+  // Hamburger menu
+  document
+    .querySelector(".navbar-toggler")
+    .addEventListener("click", function () {
+      document.querySelector("html").classList.toggle("show-menu");
+    });
+
+    // Description
+  document.querySelector(".des-minus").addEventListener("click", function () {
+    var htmlElement = document.querySelector(".des-para");
+    if (htmlElement.style.visibility === "hidden") {
+      htmlElement.style.visibility = "visible";
+    } else {
+      htmlElement.style.visibility = "hidden";
+    }
+  });
+});
 
 // Product details
 const imgs = document.querySelectorAll(".img-select a");

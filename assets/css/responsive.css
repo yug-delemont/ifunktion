@@ -95,7 +95,7 @@
     margin: auto;
   }
 
-  p#des-para {
+  p.des-para {
     max-width: -webkit-fill-available;
     width: -webkit-fill-available;
     /* line-height: normal; */
