@@ -302,7 +302,7 @@ a.btnblack {
 section.heresecrion {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100dvh;
 }
 .cursor {
   z-index: 99999999;
@@ -569,15 +569,17 @@ p.price {
 svg.may-like-pro-svg {
   position: absolute;
   left: 0;
+  bottom: 0;
 }
 img.may-like-pro-img {
   z-index: 99;
   margin: 0 0 0 1rem;
   position: relative;
-  top: -10px;
+  /* top: -10px; */
 }
 .may-like-pro-inner > div {
   z-index: 9;
+  padding-top: 1rem;
 }
 p.funktion-may-like-para {
   font-family: "Product Sans";
@@ -668,7 +670,7 @@ img.convenient-img {
   padding: 2rem 0;
 }
 section.convenient-sec {
-  padding: 5.37rem 0;
+  padding: 0 0 5.37rem 0;
 }
 .convenient-title {
   padding-bottom: 3.37rem;
@@ -1185,7 +1187,7 @@ a.bulk_product:hover {
 /* may like */
 .may-like {
   position: absolute;
-  bottom: 4.7vw;
+  bottom: 5.2vw;
   left: 0;
   width: 100vw;
 }
@@ -1251,4 +1253,12 @@ section.testimonials {
   transition: transform 0.3s;
 }button.des-minus img {
   transition: all 0.5s ease;
+}.may-like-pro-inner, .may-like-pro-inner img {
+  transition: all 0.5s ease;
+}.mask {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.scroll-process {
+  width: 50%; /* Adjust the width as needed */
 }
