@@ -781,7 +781,7 @@ footer {
 }
 .footer-links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 .footer-link-inner {
@@ -813,6 +813,7 @@ p.copyright-para {
 .footer-social {
   display: flex;
   gap: 1.25rem;
+  flex-wrap: wrap;
 }
 a.footer-a {
   line-height: normal;
@@ -861,6 +862,7 @@ p.copyright-para {
   border-radius: 20px;
   padding: 1.5rem 1rem 3rem;
   width: 100%;
+  height: fit-content;
 }
 .image_list {
   display: flex;
@@ -954,7 +956,7 @@ p.copyright-para {
 }
 .bulk_product {
   height: 109px;
-  width: 100%;
+  /* width: 100%; */
   /* margin: 16px 16px 16px 0; */
   justify-content: space-between;
   border-radius: 16px;
@@ -1048,8 +1050,8 @@ p.copyright-para {
 .pro_sport {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 96px;
+  justify-content: space-between;
+  gap: 2rem;
 }
 .optimal_energy {
   display: flex;
@@ -1123,6 +1125,7 @@ p.contains-para {
 .bulk_product_div {
     padding: 2rem 0;
     gap: 1rem;
+    justify-content: center;
 }
 a.bulk_product.active {
     /* border-radius: 1rem; */
@@ -1160,3 +1163,20 @@ a.bulk_product:hover {
 .img-item:hover{
   opacity: 0.8;
 } 
+
+.img-showcase img {
+  display: none;
+}
+
+.img-showcase img.active {
+  display: block;
+}
+.special_contant_detail h2 {
+  color: var(--Primary-Black, #000);
+  font-family: "Product Sans Medium";
+  font-size: 1.5rem;
+  font-style: normal;
+  /* font-weight: 500; */
+  line-height: normal;
+  letter-spacing: -0.03rem;
+}

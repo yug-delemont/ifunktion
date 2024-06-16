@@ -69,11 +69,12 @@ document
 //     }
 // });
 
+// Product details
 const imgs = document.querySelectorAll(".img-select a");
 const imgBtns = [...imgs];
 let imgId = 1;
 
-imgBtns.forEach((imgItem) => {
+imgBtns.forEach((imgItem, index) => {
   imgItem.addEventListener("click", (event) => {
     event.preventDefault();
     imgId = imgItem.dataset.id;
@@ -86,12 +87,26 @@ function slideImage() {
     ".img-showcase img:first-child"
   ).clientWidth;
 
-  document.querySelector(".img-showcase").style.transform = `translateX(${
-    -(imgId - 1) * displayWidth
-  }px)`;
+  // Remove active class from all images
+  document.querySelectorAll(".img-showcase img").forEach((img) => {
+    img.classList.remove("active");
+  });
+
+  // Add active class to the current image
+  document.querySelector(`.img-showcase img:nth-child(${imgId})`).classList.add("active");
+
+  // Slide the images (this part is optional if you're hiding/showing images with classes)
+  // document.querySelector(".img-showcase").style.transform = `translateX(${
+  //   -(imgId - 1) * displayWidth
+  // }px)`;
 }
 
+// Call slideImage on page load to set the initial state
+document.addEventListener("DOMContentLoaded", slideImage);
+
 window.addEventListener("resize", slideImage);
+
+
 
 $(document).ready(function () {
   $("#convenient").owlCarousel({
