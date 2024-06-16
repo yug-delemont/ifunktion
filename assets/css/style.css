@@ -1180,3 +1180,23 @@ a.bulk_product:hover {
   line-height: normal;
   letter-spacing: -0.03rem;
 }
+
+/* may like */
+.may-like {
+  position: absolute;
+  bottom: -1vw;
+  left: 0;
+  width: 100vw;
+}.may-like-pro-inner.active > div > p {
+  color: #fff;
+}
+
+.may-like-pro-inner.active svg.may-like-pro-svg path {
+  fill: black;
+}
+
+img.may-like-pro-img {
+  border-radius: 0 0 0 11px;
+}.wrapper::-webkit-scrollbar {
+  display: none;
+}

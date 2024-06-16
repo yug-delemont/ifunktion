@@ -3,6 +3,7 @@ const container = document.querySelector(".container");
 const sections = gsap.utils.toArray(".container section");
 const texts = gsap.utils.toArray(".anim");
 const mask = document.querySelector(".mask");
+const mayLikeProInners = gsap.utils.toArray(".may-like-pro-inner");
 
 let scrollTween = gsap.to(sections, {
   xPercent: -100 * (sections.length - 1),
@@ -12,14 +13,11 @@ let scrollTween = gsap.to(sections, {
     pin: true,
     scrub: 1,
     end: "+=3000",
-    //snap: 1 / (sections.length - 1),
     markers: false,
   },
 });
 
-console.log(1 / (sections.length - 1));
-
-//Progress bar animation
+// Progress bar animation
 gsap.to(mask, {
   width: "100%",
   scrollTrigger: {
@@ -29,15 +27,12 @@ gsap.to(mask, {
   },
 });
 
-// whizz around the sections
-sections.forEach((section) => {
-  // grab the scoped text
+// Text animation
+sections.forEach((section, index) => {
   let text = section.querySelectorAll(".anim");
 
-  // bump out if there's no items to animate
   if (text.length === 0) return;
 
-  // do a little stagger
   gsap.from(text, {
     y: -130,
     opacity: 0,
@@ -51,6 +46,62 @@ sections.forEach((section) => {
       markers: false,
     },
   });
+
+  // Add active class to corresponding .may-like-pro-inner
+  gsap.to({}, {
+    scrollTrigger: {
+      trigger: section,
+      containerAnimation: scrollTween,
+      start: "left center",
+      end: "right center",
+      onEnter: () => {
+        mayLikeProInners.forEach((div, i) => {
+          if (i === index) {
+            div.classList.add("active");
+          } else {
+            div.classList.remove("active");
+          }
+        });
+      },
+      onLeaveBack: () => {
+        mayLikeProInners.forEach((div, i) => {
+          if (i === index - 1) {
+            div.classList.add("active");
+          } else {
+            div.classList.remove("active");
+          }
+        });
+      },
+    },
+  });
+});
+
+// Initialize active class on page load based on scroll position
+function setActiveClassOnLoad() {
+  let scrollPos = window.pageYOffset;
+  let containerRect = container.getBoundingClientRect();
+  let containerStart = containerRect.left + window.pageXOffset;
+
+  sections.forEach((section, index) => {
+    let sectionRect = section.getBoundingClientRect();
+    let sectionStart = sectionRect.left + window.pageXOffset - containerStart;
+    let sectionEnd = sectionStart + sectionRect.width;
+
+    if (scrollPos >= sectionStart && scrollPos < sectionEnd) {
+      mayLikeProInners.forEach((div, i) => {
+        if (i === index) {
+          div.classList.add("active");
+        } else {
+          div.classList.remove("active");
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener('load', () => {
+  setActiveClassOnLoad();
+  ScrollTrigger.refresh();
 });
 
 // Hamburger menu
@@ -93,7 +144,9 @@ function slideImage() {
   });
 
   // Add active class to the current image
-  document.querySelector(`.img-showcase img:nth-child(${imgId})`).classList.add("active");
+  document
+    .querySelector(`.img-showcase img:nth-child(${imgId})`)
+    .classList.add("active");
 
   // Slide the images (this part is optional if you're hiding/showing images with classes)
   // document.querySelector(".img-showcase").style.transform = `translateX(${
@@ -105,8 +158,6 @@ function slideImage() {
 document.addEventListener("DOMContentLoaded", slideImage);
 
 window.addEventListener("resize", slideImage);
-
-
 
 $(document).ready(function () {
   $("#convenient").owlCarousel({
