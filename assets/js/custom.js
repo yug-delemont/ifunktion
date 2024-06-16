@@ -108,7 +108,6 @@ window.addEventListener("load", () => {
   ScrollTrigger.refresh();
 });
 
-
 document.addEventListener("DOMContentLoaded", (event) => {
   // Hamburger menu
   document
@@ -117,13 +116,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
       document.querySelector("html").classList.toggle("show-menu");
     });
 
-    // Description
+  // Description
   document.querySelector(".des-minus").addEventListener("click", function () {
     var htmlElement = document.querySelector(".des-para");
+    let minus = document.querySelector(".des-minus img");
     if (htmlElement.style.visibility === "hidden") {
       htmlElement.style.visibility = "visible";
+      minus.classList.remove("rotate-180");
     } else {
       htmlElement.style.visibility = "hidden";
+      minus.classList.add("rotate-180");
     }
   });
 });
@@ -172,7 +174,7 @@ $(document).ready(function () {
     loop: true,
     margin: 32,
     nav: true,
-    dots:false,
+    dots: false,
     navText: [
       "<img src='./assets/images/slider-left-arrow.svg'>",
       "<img src='./assets/images/slider-right-arrow.svg'>",
@@ -204,22 +206,19 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        dots: false
-
+        // dots: false,
       },
       800: {
         items: 2,
-        dots: false
-
+        // dots: false,
       },
       1118: {
         items: 3,
-        dots: false
-
+        // dots: false,
       },
-      1760:{
-        dots: false
-      }
+      1760: {
+        // dots: false,
+      },
     },
   });
 
@@ -236,22 +235,19 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        dots: false
-
+        dots: false,
       },
       800: {
         items: 2,
-        dots: false
-
+        dots: false,
       },
       1118: {
         items: 3,
-        dots: false
-
+        dots: false,
       },
-      1760:{
-        dots: false
-      }
+      1760: {
+        dots: false,
+      },
     },
   });
 });

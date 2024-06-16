@@ -1235,3 +1235,20 @@ section.testimonials {
 .owl-theme .owl-dots .owl-dot span {
   background: #dee2e6;
 }
+.owl-dots {
+  margin-top: 2rem;
+}
+
+.des-minus img{
+  width: 16px;
+  height: 16px;
+} .des-para {
+  visibility: visible;
+  transition: visibility 0.3s;
+}
+.rotate-180 {
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}button.des-minus img {
+  transition: all 0.5s ease;
+}
