@@ -341,7 +341,7 @@ section.heresecrion {
 .owl-nav,
 span.energy-span::after {
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
 .cursor-inner {
   display: block;
@@ -413,14 +413,18 @@ h1.energy-h1 {
 }
 span.energy-span {
   color: var(--Primary-Yellow, #bfd900);
+  display: flex;
 }
 span.energy-span::after {
   content: "";
   position: absolute;
-  background: url("../images/enerhy-line.svg") 0 0 / cover no-repeat;
-  width: 180%;
+  background: url("../images/enerhy-line.svg") no-repeat;
+  width: 110%;
   height: 100%;
-  top: 0;
+  top: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  background-position: center;
 }
 p.dhs {
   color: #000;
