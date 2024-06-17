@@ -108,57 +108,63 @@
 //   ScrollTrigger.refresh();
 // });
 
-let hasViewedAllSlides = false;
-
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      grabCursor: true,
-      keyboard: {
-        enabled: true,
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    mousewheel: {
+      enabled: true,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 1,
       },
-      mousewheel: true,
-      breakpoints: {
-        769: {
-          slidesPerView: 1,
-        },
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    on: {
+      slideChange: function () {
+        updateActiveClass(swiper.activeIndex);
+        toggleMousewheel(swiper.activeIndex);
       },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-      on: {
-        slideChange: function () {
-          updateActiveClass(swiper.activeIndex);
-        },
-        reachEnd: function () {
-          hasViewedAllSlides = true;
-        }
-      },
-    });
-
-    function updateActiveClass(activeIndex) {
-      const items = document.querySelectorAll('.may-like-pro-inner');
-      items.forEach((item, index) => {
-        if (index === activeIndex) {
-          item.classList.add('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
-    }
-
-    function scrollToConvenientSec() {
-      const convenientSec = document.querySelector('.convenient-sec');
-      if (convenientSec) {
-        convenientSec.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Initial active class setting
-    updateActiveClass(swiper.activeIndex);
-
-    // Detect scroll after viewing all slides
-    window.addEventListener('scroll', function() {
-      if (hasViewedAllSlides && window.scrollY > document.documentElement.clientHeight) {
-        scrollToConvenientSec();
+    },
+  });
+  
+  // Function to update active class
+  function updateActiveClass(activeIndex) {
+    const items = document.querySelectorAll(".may-like-pro-inner");
+    items.forEach((item, index) => {
+      if (index === activeIndex) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
       }
     });
+  }
+  
+  // Function to enable or disable mousewheel control
+  function toggleMousewheel(activeIndex) {
+    const lastSlideIndex = swiper.slides.length - 1;
+    if (activeIndex === lastSlideIndex) { // Last slide index
+      swiper.mousewheel.disable();
+      window.addEventListener('wheel', handleScrollNextSection);
+    } else {
+      swiper.mousewheel.enable();
+      window.removeEventListener('wheel', handleScrollNextSection);
+    }
+  }
+  
+  // Function to handle scrolling to the next section
+  function handleScrollNextSection(event) {
+    // if (event.deltaY > 0) {
+    //   // Scroll down to the next section
+    //   document.querySelector('.convenient-sec').scrollIntoView({ behavior: 'smooth' });
+    // }
+  }
+  
+  // Initial active class setting
+  updateActiveClass(swiper.activeIndex);
+  toggleMousewheel(swiper.activeIndex);
