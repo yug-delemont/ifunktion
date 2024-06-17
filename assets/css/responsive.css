@@ -38,6 +38,9 @@
 }
 
 @media only screen and (max-width: 1429px) {
+  span.vector-green {
+    display: none;
+}
   .card .card-bg {
     inset: 9rem 0 0.1rem 0;
   }
@@ -137,6 +140,22 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .may-like-pro-main {overflow-x: scroll;}
+  h2.may-like-head {
+    font-size: 2.25rem;
+    line-height: normal;
+}
+
+.may-like-wrapper {
+    gap: 1.5rem;
+}
+.may-like-pro-main::-webkit-scrollbar {
+    display: none;
+}
+
+.may-like-pro {
+    min-width: 60rem;
+}
   .Contains h1 {
     font-size: 2rem;
     line-height: normal;

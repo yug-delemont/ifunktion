@@ -542,20 +542,22 @@ p.card-info-para {
   height: 0.6875rem;
   left: 0;
   bottom: -1rem;
+}.may-like-pro-main {
+  width: 100%;
 }
 .may-like-wrapper {
   gap: 2rem;
 }
 .may-like-pro {
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .may-like-pro-inner {
   display: flex;
   align-items: center;
   position: relative;
   gap: 1.25rem;
-  /* width: 100%; */
+  width: 100%;
 }
 h2.may-like-head {
   color: #000;
