@@ -175,3 +175,11 @@ document.querySelectorAll(".may-like-pro-inner").forEach((item, index) => {
       swiper.slideTo(index);
     });
   });
+
+  // Global scroll event listener to detect scroll direction and enable mousewheel
+window.addEventListener('wheel', (event) => {
+  if (event.deltaY < 0) {
+    // Scroll direction is upwards (bottom to top)
+    swiper.mousewheel.enable();
+  }
+});

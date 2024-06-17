@@ -341,7 +341,7 @@ section.heresecrion {
 .owl-nav,
 span.energy-span::after {
   left: 50%;
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
 }
 .cursor-inner {
   display: block;
