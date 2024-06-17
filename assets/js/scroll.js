@@ -168,3 +168,10 @@ var swiper = new Swiper(".mySwiper", {
   // Initial active class setting
   updateActiveClass(swiper.activeIndex);
   toggleMousewheel(swiper.activeIndex);
+
+  // Add click event listeners to .may-like-pro-inner elements
+document.querySelectorAll(".may-like-pro-inner").forEach((item, index) => {
+    item.addEventListener("click", () => {
+      swiper.slideTo(index);
+    });
+  });
