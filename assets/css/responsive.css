@@ -238,6 +238,7 @@
 
   .may-like {
     padding-top: 2rem;
+    padding-bottom: 0;
   }
   h1.energy-h1 {
     font-size: 2.625rem;
