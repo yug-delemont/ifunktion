@@ -1212,7 +1212,7 @@ img.may-like-pro-img {
   display: none;
 }
 img.home-product-img {
-  aspect-ratio: 0.9 / 1;
+  aspect-ratio: 0.8 / 1;
   object-fit: contain;
 }
 .discription > div > h3 {
@@ -1271,6 +1271,7 @@ section.testimonials {
 .hero-slider {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 /* Swiper slider */
@@ -1335,4 +1336,6 @@ section.testimonials {
 
 .swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
   padding-bottom: 2rem;
+}img.home-product-img {
+  margin: 0;
 }
