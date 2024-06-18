@@ -231,6 +231,9 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .card-info-main {
+    margin-top: 1rem;
+}
   .swiper-horizontal > .swiper-scrollbar,
   .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: 0.4rem !important;
