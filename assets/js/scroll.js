@@ -1,72 +1,85 @@
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
+  slidesPerView: 1,
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  mousewheel: {
+    enabled: true,
+  },
+  breakpoints: {
+    769: {
+      slidesPerView: 1,
     },
-    mousewheel: {
-      enabled: true,
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  on: {
+    slideChange: function () {
+      updateActiveClass(swiper.activeIndex);
+      toggleMousewheel(swiper.activeIndex);
+      updatePrice(swiper.activeIndex); // Update price on slide change
     },
-    breakpoints: {
-      769: {
-        slidesPerView: 1,
-      },
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    on: {
-      slideChange: function () {
-        updateActiveClass(swiper.activeIndex);
-        toggleMousewheel(swiper.activeIndex);
-      },
-    },
-  });
-  
-  // Function to update active class
-  function updateActiveClass(activeIndex) {
-    const items = document.querySelectorAll(".may-like-pro-inner");
-    items.forEach((item, index) => {
-      if (index === activeIndex) {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-  }
-  
-  // Function to enable or disable mousewheel control
-  function toggleMousewheel(activeIndex) {
-    const lastSlideIndex = swiper.slides.length - 1;
-    if (activeIndex === lastSlideIndex) { // Last slide index
-      swiper.mousewheel.disable();
-      window.addEventListener('wheel', handleScrollNextSection);
+  },
+});
+
+// Array of prices corresponding to each slide
+const prices = ["Dhs 15.00", "Dhs 5.00", "Dhs 55.00"];
+
+// Function to update the price based on the active slide index
+function updatePrice(activeIndex) {
+  const priceElement = document.querySelector(".dhs.anim");
+  priceElement.textContent = prices[activeIndex];
+}
+
+// Function to update active class
+function updateActiveClass(activeIndex) {
+  const items = document.querySelectorAll(".may-like-pro-inner");
+  items.forEach((item, index) => {
+    if (index === activeIndex) {
+      item.classList.add("active");
     } else {
-      swiper.mousewheel.enable();
-      window.removeEventListener('wheel', handleScrollNextSection);
+      item.classList.remove("active");
     }
-  }
-  
-  // Function to handle scrolling to the next section
-  function handleScrollNextSection(event) {
-    // if (event.deltaY > 0) {
-    //   // Scroll down to the next section
-    //   document.querySelector('.convenient-sec').scrollIntoView({ behavior: 'smooth' });
-    // }
-  }
-  
-  // Initial active class setting
-  updateActiveClass(swiper.activeIndex);
-  toggleMousewheel(swiper.activeIndex);
-
-  // Add click event listeners to .may-like-pro-inner elements
-document.querySelectorAll(".may-like-pro-inner").forEach((item, index) => {
-    item.addEventListener("click", () => {
-      swiper.slideTo(index);
-    });
   });
+}
 
-  // Global scroll event listener to detect scroll direction and enable mousewheel
+// Function to enable or disable mousewheel control
+function toggleMousewheel(activeIndex) {
+  const lastSlideIndex = swiper.slides.length - 1;
+  if (activeIndex === lastSlideIndex) { // Last slide index
+    swiper.mousewheel.disable();
+    window.addEventListener('wheel', handleScrollNextSection);
+  } else {
+    swiper.mousewheel.enable();
+    window.removeEventListener('wheel', handleScrollNextSection);
+  }
+}
+
+// Function to handle scrolling to the next section
+function handleScrollNextSection(event) {
+  // if (event.deltaY > 0) {
+  //   // Scroll down to the next section
+  //   document.querySelector('.convenient-sec').scrollIntoView({ behavior: 'smooth' });
+  // }
+}
+
+// Initial active class setting
+updateActiveClass(swiper.activeIndex);
+toggleMousewheel(swiper.activeIndex);
+
+// Initial price setting
+updatePrice(swiper.activeIndex);
+
+// Add click event listeners to .may-like-pro-inner elements
+document.querySelectorAll(".may-like-pro-inner").forEach((item, index) => {
+  item.addEventListener("click", () => {
+    swiper.slideTo(index);
+  });
+});
+
+// Global scroll event listener to detect scroll direction and enable mousewheel
 window.addEventListener('wheel', (event) => {
   if (event.deltaY < 0) {
     // Scroll direction is upwards (bottom to top)
